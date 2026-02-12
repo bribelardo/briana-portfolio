@@ -1,26 +1,40 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
       <section className="border-b border-black pb-16 md:pb-20 lg:pb-24">
-        <div className="max-w-3xl space-y-8">
-          <p className="font-heading text-xs font-bold uppercase tracking-[0.35em]">
-            Placeholder positioning line
-          </p>
-          <h1 className="font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            This is placeholder hero text for Briana&apos;s portfolio homepage.
-          </h1>
-          <p className="max-w-xl text-base leading-relaxed">
-            Use this short paragraph to explain who Briana is, the kind of work
-            she does, and why a visitor should care. Replace this with clear,
-            direct copy that sets expectations in one or two sharp sentences.
-          </p>
-          <div className="mt-6">
-            <a
-              href="#homepage-newsletter"
-              className="inline-flex items-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-background transition-colors hover:bg-black"
-            >
-              Join the newsletter
-            </a>
+        <div className="grid gap-12 md:grid-cols-[1fr_auto] md:items-center md:gap-16">
+          <div className="max-w-3xl space-y-8">
+            <p className="font-heading text-xs font-bold uppercase tracking-[0.35em]">
+              Placeholder positioning line
+            </p>
+            <h1 className="font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+              This is placeholder hero text for Briana&apos;s portfolio homepage.
+            </h1>
+            <p className="max-w-xl text-base leading-relaxed">
+              Use this short paragraph to explain who Briana is, the kind of work
+              she does, and why a visitor should care. Replace this with clear,
+              direct copy that sets expectations in one or two sharp sentences.
+            </p>
+            <div className="mt-6">
+              <a
+                href="#homepage-newsletter"
+                className="inline-flex items-center rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-background transition-colors hover:bg-black"
+              >
+                Join the newsletter
+              </a>
+            </div>
+          </div>
+          <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden border border-black md:max-w-xs">
+            <Image
+              src="/bri-pic.jpg"
+              alt="Briana Mae Belardo"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 768px) 100vw, 320px"
+            />
           </div>
         </div>
       </section>

@@ -19,7 +19,7 @@ Tone and visual feel should remain: **confident, modern, sharp, high‑contrast,
 ### Tech Stack and Architecture
 
 - **Framework**: Next.js, App Router (`app/`), TypeScript.
-- **Rendering**: Static generation only (safe for Vercel static hosting).
+- **Rendering**: Static generation only; `output: "export"` in `next.config.ts` (safe for Vercel, Cloudflare Pages, or any static host).
 - **Styling**: Tailwind CSS v4 via `@tailwindcss/postcss` and `app/globals.css`.
 - **Tooling**: ESLint (`eslint.config.mjs`), TypeScript (`tsconfig.json`).
 - **No backend**:
@@ -50,12 +50,7 @@ From the project root (`bri`):
 
 3. Open `http://localhost:3000` in a browser.
 
-Optional production preview:
-
-```bash
-npm run build
-npm start
-```
+Optional production preview (static export): run `npm run build`, then serve the `out` folder (e.g. `npx serve out`) and open the URL shown.
 
 #### Windows / PowerShell note
 
@@ -69,6 +64,10 @@ If `npm` scripts are blocked by PowerShell’s execution policy, either:
   ```
 
 Then re‑run `npm install` and `npm run dev`.
+
+#### Deployment (Cloudflare Pages)
+
+The app uses **static export** (`output: "export"`). Build with `npm run build`; output goes to `out/`. See **DEPLOY-CLOUDFLARE.md** in the repo root for step-by-step Cloudflare Pages deployment (Git connect or Wrangler CLI).
 
 ---
 
