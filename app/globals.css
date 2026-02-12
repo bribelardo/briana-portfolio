@@ -4,6 +4,8 @@
   --background: #ffffff;
   --foreground: #000000;
   --accent: #ff1744; /* violent red accent */
+  --vintage-grape: #473144;
+  --pastel-pink: #FFCAD4;
 
   --font-body: "Switzer", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -15,6 +17,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-vintage-grape: var(--vintage-grape);
+  --color-pastel-pink: var(--pastel-pink);
 
   --font-body: var(--font-body);
   --font-heading: var(--font-heading);
@@ -24,4 +28,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+}
+
+/* Smooth transitions for interactive elements */
+* {
+  transition-property: color, background-color, border-color, transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
