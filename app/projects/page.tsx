@@ -1,5 +1,4 @@
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { ProjectCard } from "@/components/ProjectCard";
+Yimport { ProjectCard } from "@/components/ProjectCard";
 
 const projects = [
   {
@@ -61,29 +60,6 @@ export default function ProjectsPage() {
               href="#"
             />
           ))}
-        </div>
-      </section>
-
-      <section
-        aria-labelledby="projects-newsletter-heading"
-        className="py-12 md:py-16 lg:py-20"
-      >
-        <div className="max-w-3xl space-y-6">
-          <p className="font-heading text-xs font-bold uppercase tracking-[0.3em] text-[#473144]">
-            Newsletter
-          </p>
-          <h2
-            id="projects-newsletter-heading"
-            className="font-heading text-2xl font-bold leading-tight text-[#473144] md:text-3xl"
-          >
-            Conversion-focused newsletter call-to-action placeholder.
-          </h2>
-          <p className="text-sm leading-relaxed">
-            After someone has explored Briana&apos;s projects, use this section
-            to invite them into an ongoing relationship. Replace this text with
-            a clear, specific promise about what subscribers gain.
-          </p>
-          <NewsletterForm />
         </div>
       </section>
     </>

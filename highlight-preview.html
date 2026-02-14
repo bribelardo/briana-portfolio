@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Briana – Highlight Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --grape: #473144;
+        --pink: #ffcad4;
+        --bg: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--grape);
+        padding: 40px 16px;
+      }
+
+      .page {
+        max-width: 1040px;
+        margin: 0 auto;
+        border: 1px solid var(--grape);
+        padding: 32px 32px 40px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        margin-bottom: 8px;
+      }
+
+      .hero {
+        border-bottom: 1px solid var(--grape);
+        padding-bottom: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        gap: 40px;
+        align-items: center;
+      }
+
+      .hero-intro {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      .hero-title {
+        font-size: 34px;
+        line-height: 1.05;
+        margin-bottom: 16px;
+      }
+
+      .hero-title .highlight-chip {
+        background: var(--pink);
+        padding: 0 4px;
+      }
+
+      .hero-title .highlight-underline {
+        border-bottom: 2px solid var(--pink);
+        padding-bottom: 2px;
+      }
+
+      .hero-body {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 460px;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn-primary {
+        background: var(--grape);
+        color: #fff;
+        border-radius: 999px;
+        padding: 10px 22px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.26em;
+        border: 1px solid var(--grape);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--grape);
+        border-radius: 999px;
+        padding: 10px 22px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.26em;
+        border: 1px solid var(--grape);
+      }
+
+      .hero-visual {
+        border: 1px solid var(--grape);
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(71, 49, 68, 0.7);
+      }
+
+      .section {
+        border-bottom: 1px solid var(--grape);
+        padding: 40px 0;
+      }
+
+      .section-header {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+      }
+
+      .section-title {
+        font-size: 22px;
+        max-width: 460px;
+      }
+
+      .section-title .underline {
+        border-bottom: 2px solid var(--pink);
+        padding-bottom: 2px;
+      }
+
+      .section-body {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 520px;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--pink);
+        font-size: 11px;
+        margin: 4px 6px 0 0;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .project-card {
+        border: 1px solid var(--grape);
+        padding: 18px 18px 20px;
+        background: #fff;
+      }
+
+      .project-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 10px;
+      }
+
+      .project-body {
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .project-body .key {
+        border-bottom: 2px solid var(--pink);
+      }
+
+      .project-cta {
+        margin-top: 14px;
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .projects-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-intro">Hi, I’m Briana Mae Belardo.</div>
+          <h1 class="hero-title">
+            UI Designer crafting
+            <span class="highlight-chip">accessible</span>
+            and meaningful
+            <span class="highlight-underline">digital experiences</span>.
+          </h1>
+          <p class="hero-body">
+            I design clear, user-centered interfaces that balance aesthetics,
+            accessibility, and performance—so products feel effortless to use
+            and easy to maintain.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary">View Projects</button>
+            <button class="btn-secondary">Get in Touch</button>
+          </div>
+        </div>
+        <div class="hero-visual">Hero Image Placeholder</div>
+      </section>
+
+      <!-- ABOUT PREVIEW -->
+      <section class="section">
+        <div class="section-header">
+          <div class="section-title">
+            Designing interfaces that
+            <span class="underline">stay out of the way</span>.
+          </div>
+        </div>
+        <div class="section-body">
+          <p>
+            I’m a UI designer with an Information Technology background, focused
+            on building interfaces that are intuitive from
+            <span class="underline">first click to final handoff</span>.
+          </p>
+          <p style="margin-top: 12px">
+            I care about accessibility, predictable patterns, and design systems
+            that make products easy to grow and maintain over time.
+          </p>
+          <div style="margin-top: 18px">
+            <span class="pill">Figma</span>
+            <span class="pill">Accessibility</span>
+            <span class="pill">UX Research</span>
+            <span class="pill">Prototyping</span>
+            <span class="pill">Design Systems</span>
+            <span class="pill">React UI</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SELECTED WORK -->
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Selected Work</div>
+            <div class="section-title">
+              Systems designed for
+              <span class="underline">clarity, scale</span>, and real-world use.
+            </div>
+          </div>
+          <div class="project-cta">View all projects →</div>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3 class="project-title">
+              I‑Promote · Marketing Campaign Platform
+            </h3>
+            <p class="project-body">
+              A capstone platform built to help businesses plan, manage, and
+              track digital campaigns in one place.
+            </p>
+            <p class="project-body" style="margin-top: 10px">
+              Includes user roles,
+              <span class="key">campaign workflows</span>, and admin tools
+              designed for reliability and ease of use.
+            </p>
+            <div class="project-cta">View case study →</div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              Sunshine K‑Collectibles · E‑commerce Experience
+            </h3>
+            <p class="project-body">
+              An online store for K‑pop merchandise, focused on smooth browsing,
+              clear product information, and
+              <span class="key">secure checkout</span>.
+            </p>
+            <p class="project-body" style="margin-top: 10px">
+              Structured around an end‑to‑end flow from discovery to order
+              tracking.
+            </p>
+            <div class="project-cta">View case study →</div>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">
+              Lumina Haven · Hotel Booking Concept
+            </h3>
+            <p class="project-body">
+              A booking experience designed to make comparing rooms, dates, and
+              offers simple.
+            </p>
+            <p class="project-body" style="margin-top: 10px">
+              Emphasizes <span class="key">trust</span> through clear
+              information, media, and a straightforward reservation path.
+            </p>
+            <div class="project-cta">View case study →</div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
