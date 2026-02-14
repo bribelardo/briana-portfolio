@@ -1,27 +1,29 @@
-const DynamicBackground = () => {
-    return (
-        <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 1440 800"
-            preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ position: "absolute", top: 0, left: 0 }}
-        >
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: "white", stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: "black", stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: "red", stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: "white", stopOpacity: 1 }} />
-                </linearGradient>
-            </defs>
-            <path fill="url(#grad1)" d="M0,400 C400,200 800,600 1440,400 L1440,800 L0,800 Z" />
-            <path fill="url(#grad2)" d="M0,600 C400,800 800,400 1440,600 L1440,800 L0,800 Z" />
-        </svg>
-    );
+import React from 'react';
+// Use the relative path to your actual component
+import DynamicBackground from './DynamicBackground'; 
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
+      {/* 1. The Background Layer */}
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <DynamicBackground />
+      </div>
+
+      {/* 2. The Navigation */}
+      <Navbar />
+      
+      {/* 3. The Main Content */}
+      <main style={{ position: 'relative', zIndex: 1, padding: '20px' }}>
+        {children}
+      </main>
+
+      {/* 4. The Footer */}
+      <Footer />
+    </div>
+  );
 };
 
-export default DynamicBackground;
+export default Layout;

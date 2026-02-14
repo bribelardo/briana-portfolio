@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NewsletterForm } from "@/components/NewsletterForm";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="border-t-2 border-[#473144] bg-[#FFCAD4]">
       <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 py-12 lg:px-8 lg:py-16">

@@ -6,7 +6,7 @@ const navItems = [
   { href: "/projects", label: "Projects" },
 ];
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <header className="border-b-2 border-[#473144] bg-[#473144]">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6 lg:px-8">
